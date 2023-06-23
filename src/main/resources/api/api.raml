@@ -1,0 +1,21 @@
+#%RAML 1.0
+title: hello
+version: v1
+protocols:
+  - HTTP
+
+types:
+  "inputData":
+    properties:
+      name: string
+
+/print:
+  post:
+    body:
+      application/json:
+        type: inputData
+    responses:
+      200:
+        body:
+          application/json:
+            type: inputData
